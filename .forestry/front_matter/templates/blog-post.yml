@@ -51,6 +51,23 @@ fields:
       file: 
       path: 
   label: Connected Posts
+- name: connected_post
+  type: field_group
+  config: {}
+  fields:
+  - name: post
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: blog-posts
+        file: 
+        path: 
+    label: post
+  label: connected_post
 pages:
 - content/posts/an-essay-on-walking.md
 - content/posts/ne-te-quaesiveris-extra.md
