@@ -2,6 +2,16 @@
 label: Blog Post
 hide_body: false
 fields:
+- name: multi_connected_posts
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: blog-posts
+  label: Multi connected posts
 - type: text
   name: title
   label: title
