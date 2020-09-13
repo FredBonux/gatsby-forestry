@@ -2,16 +2,6 @@
 label: Blog Post
 hide_body: false
 fields:
-- name: multi_connected_posts
-  type: list
-  config:
-    use_select: true
-    min: 
-    max: 
-    source:
-      type: pages
-      section: blog-posts
-  label: Multi connected posts
 - type: text
   name: title
   label: title
@@ -49,34 +39,20 @@ fields:
   label: hero image
   description: Enter hero image for blog post here
   default: "/content/images/sarah-dorweiler-9Z1KRIfpBTM-unsplash.jpg"
-- name: connected_posts
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: pages
-      section: blog-posts
-      file: 
-      path: 
-  label: Connected Posts
 - name: connected_post
   type: field_group
   config: {}
   fields:
-  - name: post
-    type: select
-    default: []
+  - name: connected_posts
+    type: list
     config:
-      required: false
-      options: []
+      use_select: true
+      min: 
+      max: 
       source:
         type: pages
         section: blog-posts
-        file: 
-        path: 
-    label: post
+    label: Connected posts
   label: connected_post
 pages:
 - content/posts/an-essay-on-walking.md
